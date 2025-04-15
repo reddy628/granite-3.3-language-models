@@ -11,9 +11,9 @@
 ## Introduction to Granite 3.3 Language Models
 Granite 3.3 language models are lightweight, state-of-the-art, open foundation models that natively support multilinguality, coding, reasoning, and tool usage, including the potential to be run on constrained compute resources. All the models are publicly released under an Apache 2.0 license for both research and commercial use. The models' data curation and training procedure were designed for enterprise usage and customization, with a process that evaluates datasets for governance, risk and compliance (GRC) criteria, in addition to IBM's standard data clearance process and document quality checks.
 
-Granite 3.3 models retain the context length and key capabilities of earlier versions, such as response length control and response originality. Additionally, Granite 3.3 introduces fill-in-the-middle (FIM) support for code completion and improves the clarity of model reasoning by separating intermediate thoughts from final answers.
+Granite 3.3 models retain the context length and key capabilities of earlier versions, such as response length control and response originality. Additionally, this release introduces fill-in-the-middle (FIM) support for code completion and improves the clarity of model reasoning by separating intermediate thoughts from final answers. Granite 3.3 models are available in two different sizes and are built on a dense architecture. These models were trained on a total of 12 trillion tokens, comprising synthetic data generated from a variety of open-source LLMs, including but not limited to models like Mistral and Gemma. Gemma is provided under and subject to the Gemma Terms of Use found at `https://ai.google.dev/gemma/terms`.
 
-Granite 3.3 models are available in two different sizes and are built on a dense architecture. They were trained on a total of 12 trillion tokens. We release base model — checkpoints of models after pretraining, as well as instruct checkpoints — models finetuned for dialogue, instruction-following, helpfulness, and safety.
+We release base model — checkpoints of models after pretraining, as well as instruct checkpoints — models finetuned for dialogue, instruction-following, helpfulness, and safety. Comprehensive evaluation results for all model variants, as well as other relevant information will be available in Granite 3.3 Language Model Cards.
 
 <!-- TO DO: Mention an evaluation highlight -->
 <!-- Evaluation results show that Granite-3.3-8B-Instruct outperforms models of similar parameter sizes in [Hugging Face's OpenLLM Leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard#/) (see Figure 1). 
@@ -25,7 +25,6 @@ Granite 3.3 models are available in two different sizes and are built on a dense
   Figure 1. Evaluation results from Granite-3.1-8B-Instruct in Hugging Face's OpenLLM Leaderboard.</figcaption>
 </figure>
 </br> -->
-Comprehensive evaluation results for all model variants, as well as other relevant information will be available in Granite 3.3 Language Models technical report.
 
 ## How to Use our Models?
 To use any of our models, pick an appropriate `model_path` from:
@@ -63,7 +62,7 @@ output = tokenizer.batch_decode(output)
 print(output)
 ```
 ## How to Download our Models?
-The model of choice (ibm-granite/granite-3.1-8b-instruct in this example) can be cloned using:
+The model of choice (`ibm-granite/granite-3.1-8b-instruct` in this example) can be cloned using:
 ```shell
 git clone https://huggingface.co/ibm-granite/ibm-granite/granite-3.1-8b-instruct
 ```
