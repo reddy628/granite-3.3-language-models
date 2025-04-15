@@ -11,7 +11,7 @@
 ## Introduction to Granite 3.3 Language Models
 Granite 3.3 language models are lightweight, state-of-the-art, open foundation models that natively support multilinguality, coding, reasoning, and tool usage, including the potential to be run on constrained compute resources. All the models are publicly released under an Apache 2.0 license for both research and commercial use. The models' data curation and training procedure were designed for enterprise usage and customization, with a process that evaluates datasets for governance, risk and compliance (GRC) criteria, in addition to IBM's standard data clearance process and document quality checks.
 
-Granite 3.3 models retain the context length and key capabilities of earlier versions, such as response length control and response originality, while enhancing RAG-specific features such as document citation. Additionally, Granite 3.3 introduces fill-in-the-middle (FIM) support for code completion and improves the clarity of model reasoning by separating intermediate thoughts from final answers.
+Granite 3.3 models retain the context length and key capabilities of earlier versions, such as response length control and response originality. Additionally, Granite 3.3 introduces fill-in-the-middle (FIM) support for code completion and improves the clarity of model reasoning by separating intermediate thoughts from final answers.
 
 Granite 3.3 models are available in two different sizes and are built on a dense architecture. They were trained on a total of 12 trillion tokens. We release base model — checkpoints of models after pretraining, as well as instruct checkpoints — models finetuned for dialogue, instruction-following, helpfulness, and safety.
 
