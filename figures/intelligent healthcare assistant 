@@ -1,0 +1,42 @@
+import datetime
+
+# Sample medical knowledge base (can be expanded)
+conditions = {
+    "fever": ["flu", "common cold", "COVID-19", "malaria"],
+    "cough": ["common cold", "COVID-19", "bronchitis"],
+    "headache": ["migraine", "tension headache", "flu"],
+    "nausea": ["food poisoning", "stomach flu", "pregnancy"],
+    "fatigue": ["anemia", "hypothyroidism", "depression"]
+}
+
+# Function to suggest possible conditions
+def suggest_conditions(symptoms):
+    suggested = []
+    for symptom in symptoms:
+        matches = conditions.get(symptom.lower())
+        if matches:
+            suggested.extend(matches)
+    return list(set(suggested)) if suggested else ["No suggestion found. Consider seeing a doctor."]
+
+# Main interaction loop
+def health_assistant():
+    print("🤖 Hello! I'm your Health AI Assistant.")
+    name = input("What's your name? ")
+    print(f"Hi {name}, please describe your symptoms (comma-separated):")
+    
+    symptoms_input = input("Symptoms: ")
+    symptoms = [s.strip().lower() for s in symptoms_input.split(',')]
+    
+    print("\n🔍 Analyzing symptoms...")
+    possible_conditions = suggest_conditions(symptoms)
+    
+    print("\n📋 Possible conditions based on your symptoms:")
+    for cond in possible_conditions:
+        print(f"- {cond}")
+    
+    print("\n⚠️ Note: This is not a diagnosis. Please consult a healthcare professional for accurate advice.")
+    print(f"🕒 Timestamp: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+
+# Run the assistant
+if __name__ == "__main__":
+    health_assistant()
