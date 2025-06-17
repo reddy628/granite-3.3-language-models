@@ -1,0 +1,38 @@
+# Simulated HealthAI using OpenAI/LLM-style function
+
+def health_ai_assistant(symptoms):
+    # Join symptoms into a string
+    input_text = f"Patient reports the following symptoms: {', '.join(symptoms)}.\n"
+    input_text += "Suggest the most likely medical conditions with brief reasoning."
+
+    # Simulated output (replace with actual IBM Granite API call or LLM response)
+    response = simulate_granite_response(input_text)
+
+    return response
+
+
+def simulate_granite_response(prompt):
+    # Mocked output (simulating what a model like IBM Granite might return)
+    if "fever" in prompt and "cough" in prompt and "fatigue" in prompt:
+        return """
+Possible Conditions:
+1. Influenza (Flu) - Common viral infection with symptoms like fever, cough, and body aches.
+2. COVID-19 - Shares similar symptoms; testing is needed to confirm.
+3. Common Cold - Less likely if fever is high, but still possible.
+"""
+    elif "headache" in prompt and "blurred vision" in prompt:
+        return """
+Possible Conditions:
+1. Migraine - Often causes severe headache and visual disturbances.
+2. Hypertension - High blood pressure can lead to blurred vision and headache.
+3. Brain Tumor - Less common, but should be ruled out with imaging if persistent.
+"""
+    else:
+        return "Insufficient data to provide accurate diagnosis. Please provide more symptoms."
+
+
+# Example usage
+symptoms_input = ["fever", "cough", "fatigue"]
+result = health_ai_assistant(symptoms_input)
+print("=== HealthAI Diagnostic Output ===")
+print(result)
